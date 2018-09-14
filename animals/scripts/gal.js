@@ -1,3 +1,5 @@
+var fileList = ["0.jpeg", "1.jpeg"];
+
 window.onload = choosePic;
 
 function choosePic() {
@@ -9,8 +11,7 @@ function choosePic() {
      } else {
           name = page;
      }
-     var myPix = Folder("../pictures/" + name).getFiles();
      
-     var randomNum = Math.floor(Math.random() * myPix.length);
-     document.getElementById("pic").src = myPix[randomNum];
+     var randomNum = Math.floor(Math.random() * fileList.length);
+     document.getElementById("pic").src = "pictures/" + name + "/" + fileList[randomNum];
 }
