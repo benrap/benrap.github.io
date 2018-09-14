@@ -12,7 +12,7 @@ function choosePic() {
           name = page;
      }
      
-     switch name {
+     switch(name) {
           case "gal":
                fileList = ["0.jpeg", "1.jpeg"];
                break;
