@@ -11,3 +11,4 @@ function choosePic() {
      console.log(randomNum);
      console.log(name);
      document.getElementById("pic").src = myPix[randomNum];
+}
