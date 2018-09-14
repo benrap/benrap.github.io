@@ -30,7 +30,7 @@ function RunNormal() {
 }
 
 function RunAnimal() {
-    document.getElementById('actual404').style.visibility="none";
+    document.getElementById('actual404').style.display = "none";
 
     choosePic();
 }
