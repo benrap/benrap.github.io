@@ -25,6 +25,12 @@ function choosePic() {
           case "itay":
                fileList = ["0.png"];
                break;
+          case "ben":
+               fileList = ["0.png"];
+               break;
+          case "yakir":
+               fileList = ["0.png"];
+               break;
      }
      
      var randomNum = Math.floor(Math.random() * fileList.length);
