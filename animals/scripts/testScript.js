@@ -30,8 +30,8 @@ function RunNormal() {
 }
 
 function RunAnimal() {
-    var elem = document.getElementById('actual404');
-    elem.parentNode.removeChild(elem);
+    document.getElementById('actual404').style.visibility="none";
+
     choosePic();
 }
 
