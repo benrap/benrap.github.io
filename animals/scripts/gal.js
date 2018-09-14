@@ -9,7 +9,7 @@ function choosePic() {
      } else {
           name = page;
      }
-     var myPix = new Array("pictures/" + name + "/0.jpeg","pictures/" + name + "/1.jpeg");
+     var myPix = Folder("../pictures/" + name).getFiles();
      
      var randomNum = Math.floor(Math.random() * myPix.length);
      document.getElementById("pic").src = myPix[randomNum];
