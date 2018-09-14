@@ -8,4 +8,6 @@ var myPix = new Array("pictures/" + name + "/0.jpeg","pictures/" + name + "/1.jp
 
 function choosePic() {
      var randomNum = Math.floor(Math.random() * myPix.length);
+     console.log(randomNum);
+     console.log(name);
      document.getElementById("pic").src = myPix[randomNum];
