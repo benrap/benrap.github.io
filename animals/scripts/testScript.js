@@ -1,6 +1,6 @@
 var validNames = ["anner", "ben", "gal", "itay", "omri", "yakir"]
 
-window.onload = choosePic;
+window.onload = checkIfAnimal;
 
 function checkIfAnimal() {
      var path = window.location.pathname;
