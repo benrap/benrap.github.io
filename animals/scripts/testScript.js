@@ -31,8 +31,10 @@ function RunNormal() {
 
 function RunAnimal() {
     var toHide= document.getElementById('actual404').children;
+    console.log(toHide);
     for(var i=0; i<toHide.length;i++){
         toHide[i].style.display = "none";
+        console.log(toHide[i]);
     }
     document.getElementById('actual404').style.display = 'none';
     choosePic();
