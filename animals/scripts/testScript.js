@@ -10,7 +10,7 @@ function checkIfAnimal() {
      console.log(path);
      console.log(page);
      
-     if(path.substring(0,path.lastIndexOf("/")) == "benrap.github.io/animals") {
+     if(path.substring(0,path.lastIndexOf("/")) == "/animals") {
           console.log("look, an animal!")
           
            if(page.lastIndexOf(".html")==page.length-5 && page.length != 4){
