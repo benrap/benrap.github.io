@@ -7,7 +7,12 @@ function checkIfAnimal() {
      var page = path.split("/").pop();
      var animalName;
      
+     console.log(path);
+     console.log(page);
+     
      if(path.substring(0,path.lastIndexOf("/")) == "benrap.github.io/animals") {
+          console.log("look, an animal!")
+          
            if(page.lastIndexOf(".html")==page.length-5 && page.length != 4){
                 animalName = page.substring(0, page.length - 5);
            } else {
@@ -15,8 +20,10 @@ function checkIfAnimal() {
            }
 
            if(validNames.includes(animalName)) {
+                console.log("the animal name is " + animalName);
               RunAnimal();
            } else {
+                console.log("wait thats not an animal");
               RunNormal();
            }
      } else {
