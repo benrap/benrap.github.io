@@ -30,8 +30,11 @@ function RunNormal() {
 }
 
 function RunAnimal() {
-    document.getElementById('actual404').style.display = "none";
-
+    var toHide= document.getElementById('actual404').children;
+    for(var i=0; i<toHide.length;i++){
+        toHide[i].style.display = "none";
+    }
+    document.getElementById('actual404').style.display = 'none';
     choosePic();
 }
 
