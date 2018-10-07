@@ -1,8 +1,8 @@
 var validNames = ["anner", "ben", "gal", "itay", "omri", "yakir"]
 
-window.onload = checkIfAnimal;
+window.onload = checkIfMeme;
 
-function checkIfAnimal() {
+function checkIfMeme() {
      var path = window.location.pathname;
      var page = path.split("/").pop();
      var animalName;
@@ -51,25 +51,25 @@ function choosePic() {
      
      switch(name) {
           case "gal":
-               fileList = ["0.jpeg", "1.jpeg"];
+               numFiles = 2;
                break;
           case "anner":
-               fileList = ["0.png"];
+               numFiles = 1;
                break;
           case "omri":
-               fileList = ["0.png"];
+               numFiles = 1;
                break;
           case "itay":
-               fileList = ["0.png"];
+               numFiles = 1;
                break;
           case "ben":
-               fileList = ["0.png"];
+               numFiles = 1;
                break;
           case "yakir":
-               fileList = ["0.png"];
+               numFiles = 1;
                break;
      }
      
-     var randomNum = Math.floor(Math.random() * fileList.length);
-     document.getElementById("pic").src = "pictures/" + name + "/" + fileList[randomNum];
+     var randomNum = Math.floor(Math.random() * numFiles);
+     document.getElementById("pic").src = "pictures/" + name + "/" + randomNum;
 }
