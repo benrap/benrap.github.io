@@ -32,8 +32,6 @@ function checkIfAnimal() {
 }
 
 function RunNormal() {
-    var elem = document.getElementById('animalImage');
-    elem.parentNode.removeChild(elem);
 }
 
 function RunAnimal() {
