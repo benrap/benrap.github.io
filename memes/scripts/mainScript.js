@@ -1,4 +1,4 @@
-var validNames = ["anner", "ben", "gal", "itay", "omri", "yakir"]
+var validNames = ["anner": 1, "ben": 1, "gal": 2, "itay": 2, "omri": 1, "yakir": 1, "ofek": 1]
 
 window.onload = checkIfMeme;
 
@@ -19,11 +19,11 @@ function checkIfMeme() {
                 memeName = page;
            }
 
-           if(validNames.includes(memeName)) {
+           if(memeName in validNames)) {
                 console.log("the meme name is " + memeName);
-              RunAnimal();
+              RunMeme(memeName);
            } else {
-                console.log("wait thats not an animal");
+                console.log("wait thats not an meme");
               RunNormal();
            }
      } else {
@@ -34,44 +34,12 @@ function checkIfMeme() {
 function RunNormal() {
 }
 
-function RunAnimal() {
+function RunMeme() {
     choosePic();
 }
 
-function choosePic() {
-     var fileList;
-     var path = window.location.pathname;
-     var page = path.split("/").pop();
-     var name;
-     if(page.lastIndexOf(".html")==page.length-5 && page.length != 4){
-          name = page.substring(0, page.length - 5);
-     } else {
-          name = page;
-     }
-     
-     switch(name) {
-          case "gal":
-               numFiles = 2;
-               break;
-          case "anner":
-               numFiles = 1;
-               break;
-          case "omri":
-               numFiles = 1;
-               break;
-          case "itay":
-               numFiles = 2;
-               break;
-          case "ben":
-               numFiles = 1;
-               break;
-          case "yakir":
-               numFiles = 1;
-               break;
-          case "ofek":
-               numFiles = 1;
-               break;
-     }
+function choosePic(name) {
+     var numFiles = validNames[name];
      
      var randomNum = Math.floor(Math.random() * numFiles);
      document.getElementById("pic").src = "pictures/" + name + "/" + randomNum;
