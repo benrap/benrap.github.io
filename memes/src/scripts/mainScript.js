@@ -1,4 +1,4 @@
-var validPics = {"anner": 1, "ben": 1, "gal": 2, "itay": 3, "omri": 2, "yakir": 1, "ofek": 2, "ariel": 2};
+var validPics = {"anner": 1, "ben": 1, "gal": 2, "itay": 2, "omri": 2, "yakir": 1, "ofek": 2, "ariel": 2};
 var validVids = {"yoav": ["0.mp4"]};
 
 window.onload = checkIfMeme;
