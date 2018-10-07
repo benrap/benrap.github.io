@@ -10,17 +10,17 @@ function checkIfAnimal() {
      console.log(path);
      console.log(page);
      
-     if(path.substring(0,path.lastIndexOf("/")) == "/animals") {
+     if(path.substring(0,path.lastIndexOf("/")) == "/memes") {
           console.log("look, an animal!")
           
            if(page.lastIndexOf(".html")==page.length-5 && page.length != 4){
-                animalName = page.substring(0, page.length - 5);
+                memeName = page.substring(0, page.length - 5);
            } else {
-                animalName = page;
+                memeName = page;
            }
 
            if(validNames.includes(animalName)) {
-                console.log("the animal name is " + animalName);
+                console.log("the meme name is " + memeName);
               RunAnimal();
            } else {
                 console.log("wait thats not an animal");
@@ -35,13 +35,6 @@ function RunNormal() {
 }
 
 function RunAnimal() {
-    var toHide= document.getElementById('actual404').children;
-    console.log(toHide);
-    for(var i=0; i<toHide.length;i++){
-        toHide[i].style.display = "none";
-        console.log(toHide[i]);
-    }
-    document.getElementById('actual404').style.display = 'none';
     choosePic();
 }
 
