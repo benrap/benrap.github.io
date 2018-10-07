@@ -1,4 +1,4 @@
-var validNames = {"anner": 1, "ben": 1, "gal": 2, "itay": 3, "omri": 2, "yakir": 1, "ofek": 2}
+var validNames = {"anner": 1, "ben": 1, "gal": 2, "itay": 3, "omri": 2, "yakir": 1, "ofek": 2, "ariel": 2}
 
 window.onload = checkIfMeme;
 
@@ -42,5 +42,5 @@ function choosePic(name) {
      var numFiles = validNames[name];
      
      var randomNum = Math.floor(Math.random() * numFiles);
-     document.getElementById("pic").src = "pictures/" + name + "/" + randomNum;
+     document.getElementById("pic").src = "src/pictures/" + name + "/" + randomNum;
 }
