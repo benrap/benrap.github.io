@@ -1,4 +1,4 @@
-var validNames = {"anner": 1, "ben": 1, "gal": 2, "itay": 2, "omri": 1, "yakir": 1, "ofek": 1}
+var validNames = {"anner": "1", "ben": "1", "gal": "2", "itay": "2", "omri": "1", "yakir": "1", "ofek": "1"}
 
 window.onload = checkIfMeme;
 
