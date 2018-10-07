@@ -60,12 +60,15 @@ function choosePic() {
                numFiles = 1;
                break;
           case "itay":
-               numFiles = 1;
+               numFiles = 2;
                break;
           case "ben":
                numFiles = 1;
                break;
           case "yakir":
+               numFiles = 1;
+               break;
+          case "ofek":
                numFiles = 1;
                break;
      }
