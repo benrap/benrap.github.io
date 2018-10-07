@@ -49,7 +49,7 @@ function chooseVid(name) {
      var numFiles = validVids[name].length;
      
      var randomNum = Math.floor(Math.random() * numFiles);
-     document.getElementById("pic").parentNode.removeChild(document.getElementbyId("pic"));
+     document.getElementById("pic").parentNode.removeChild(document.getElementById("pic"));
      document.getElementById("vid").src = "src/videos/" + name + "/" + validVids[name].get(randomNum);
 }
 
@@ -57,6 +57,6 @@ function choosePic(name) {
      var numFiles = validPics[name];
      
      var randomNum = Math.floor(Math.random() * numFiles);
-     document.getElementById("vid").parentNode.removeChild(document.getElementbyId("vid"));
+     document.getElementById("vid").parentNode.removeChild(document.getElementById("vid"));
      document.getElementById("pic").src = "src/pictures/" + name + "/" + randomNum;
 }
