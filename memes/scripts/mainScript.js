@@ -19,7 +19,7 @@ function checkIfMeme() {
                 memeName = page;
            }
 
-           if(memeName in validNames)) {
+           if(memeName in validNames) {
                 console.log("the meme name is " + memeName);
               RunMeme(memeName);
            } else {
