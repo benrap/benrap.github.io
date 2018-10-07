@@ -1,4 +1,5 @@
-var validNames = {"anner": 1, "ben": 1, "gal": 2, "itay": 3, "omri": 2, "yakir": 1, "ofek": 2, "ariel": 2}
+var validPics = {"anner": 1, "ben": 1, "gal": 2, "itay": 3, "omri": 2, "yakir": 1, "ofek": 2, "ariel": 2};
+var validVids = {"yoav": 1};
 
 window.onload = checkIfMeme;
 
@@ -18,28 +19,39 @@ function checkIfMeme() {
            } else {
                 memeName = page;
            }
+          
+           var pic = false;
+           var vid = false;
 
-           if(memeName in validNames) {
-                console.log("the meme name is " + memeName);
-              RunMeme(memeName);
-           } else {
-                console.log("wait thats not an meme");
-              RunNormal();
+           if(memeName in validPics) {
+              pic = true;
+           }
+           if (memeName in validVids) {
+              vid = true;
            }
      } else {
-          RunNormal();
      }
 }
 
-function RunNormal() {
+function RunMeme(name, pic, vid) {
+     if(pic && vid && Math.random > 0.5) {
+          chooseVid(name);
+     } else if(pic){
+          choosePic(name);
+     } else {
+          chooseVid(name);
+     }
 }
 
-function RunMeme(name) {
-    choosePic(name);
+function chooseVid(name) {
+     var numFiles = validVids[name];
+     
+     var randomNum = Math.floor(Math.random() * numFiles);
+     document.getElementById("vid").src = "src/videos/" + name + "/" + randomNum;
 }
 
 function choosePic(name) {
-     var numFiles = validNames[name];
+     var numFiles = validPics[name];
      
      var randomNum = Math.floor(Math.random() * numFiles);
      document.getElementById("pic").src = "src/pictures/" + name + "/" + randomNum;
