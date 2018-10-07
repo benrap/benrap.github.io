@@ -19,7 +19,7 @@ function checkIfAnimal() {
                 memeName = page;
            }
 
-           if(validNames.includes(animalName)) {
+           if(validNames.includes(memeName)) {
                 console.log("the meme name is " + memeName);
               RunAnimal();
            } else {
