@@ -36,7 +36,7 @@ function checkIfMeme() {
 }
 
 function RunMeme(name, pic, vid) {
-     if(pic && vid && Math.random > 0.5) {
+     if(pic && vid && Math.random() > 0.5) {
           chooseVid(name);
      } else if(pic){
           choosePic(name);
