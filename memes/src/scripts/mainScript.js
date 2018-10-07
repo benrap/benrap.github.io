@@ -50,7 +50,7 @@ function chooseVid(name) {
      
      var randomNum = Math.floor(Math.random() * numFiles);
      document.getElementById("pic").parentNode.removeChild(document.getElementById("pic"));
-     document.getElementById("vid").src = "src/videos/" + name + "/" + validVids[name].get(randomNum);
+     document.getElementById("vid").src = "src/videos/" + name + "/" + validVids[name][randomNum];
 }
 
 function choosePic(name) {
