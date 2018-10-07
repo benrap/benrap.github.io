@@ -12,23 +12,25 @@ function checkIfMeme() {
      console.log(page);
      
      if(path.substring(0,path.lastIndexOf("/")) == "/memes") {
-          console.log("look, an animal!")
           
-           if(page.lastIndexOf(".html")==page.length-5 && page.length != 4){
-                memeName = page.substring(0, page.length - 5);
-           } else {
-                memeName = page;
-           }
+          if(page.lastIndexOf(".html")==page.length-5 && page.length != 4){
+               memeName = page.substring(0, page.length - 5);
+          } else {
+               memeName = page;
+          }
           
-           var pic = false;
-           var vid = false;
+          var pic = false;
+          var vid = false;
 
-           if(memeName in validPics) {
-              pic = true;
-           }
-           if (memeName in validVids) {
-              vid = true;
-           }
+          if(memeName in validPics) {
+             pic = true;
+          }
+          if (memeName in validVids) {
+             vid = true;
+          }
+          if(vid || pic) {
+               RunMeme(memeName, pic, vid);
+          }
      } else {
      }
 }
