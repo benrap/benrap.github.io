@@ -1,4 +1,4 @@
-var validPics = {"anner": 1, "ben": 1, "gal": 2, "itay": 2, "omri": 2, "yakir": 1, "ofek": 2, "ariel": 2};
+var validPics = {"anner": ["0.png"], "ben": ["0.png"], "gal": ["0.jpg", "1.jpg"], "itay": ["0.png", "1.png"], "omri": ["0.png", "1.jpg"], "yakir": ["0.png"], "ofek": ["0.jpg", "1.jpg"], "ariel": ["0.png", "1.jpg"]};
 var validVids = {"yoav": ["0.mp4"]};
 
 window.onload = checkIfMeme;
@@ -54,9 +54,9 @@ function chooseVid(name) {
 }
 
 function choosePic(name) {
-     var numFiles = validPics[name];
+     var numFiles = validPics[name].length;
      
      var randomNum = Math.floor(Math.random() * numFiles);
      document.getElementById("vid").parentNode.removeChild(document.getElementById("vid"));
-     document.getElementById("pic").src = "src/pictures/" + name + "/" + randomNum;
+     document.getElementById("pic").src = "src/pictures/" + name + "/" + validPics[name][randomNum];
 }
