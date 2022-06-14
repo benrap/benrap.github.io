@@ -1,0 +1,16 @@
+<html>
+
+<head>
+	<title> Rapo Image Displayer</title>
+</head>
+<img id="FillMeUp" src="hey">
+<script>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	var img = document.getElementById("FillMeUp");
+	img.src =urlParams.get('im');
+
+	console.log();
+</script>
+
+</html>
